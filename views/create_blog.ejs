@@ -1,0 +1,36 @@
+<%- include ('./partials/header.ejs')%>
+    <script type="text/javascript" src="/scripts/create_blog.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/create_blog.css">
+    
+    <div class="ui main text container segment">
+        <div class="ui huge header" id="title"> Add New Blog </div>
+        
+        <form class="ui form" action="/blogs/show_user_blogs" method="POST" >
+            
+            <div class="field">
+                <div class = "data">
+                    <label>Title</label>
+                </div>
+                <input name="blog[title]" placeholder="add title" type="text">
+            </div>
+            
+            <div class="field">
+                <div class = "data">
+                    <label> Image URL </label>
+                </div>
+                <input name="blog[image]" placeholder="add image url" type="text">
+            </div>
+            
+            <div class="field">
+                <div class = "data">
+                    <label>Content</label>
+                </div>
+                <textarea name="blog[content]"></textarea>
+            </div>
+            
+            <button class="ui inverted big green button" id="add_blog"> Add Blog </button>
+        
+        </form>
+    </div>
+
+<%- include ('./partials/footer.ejs')%>

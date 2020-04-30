@@ -1,0 +1,86 @@
+/* CSS for index file */
+
+.up_arrow i, .down_arrow i {
+    font-size: 3em;
+}
+
+.up_arrow {
+    width: 70px;
+    height: 70px;
+    padding-top: 1%;
+    padding-left:90%;
+}
+
+.down_arrow {
+    width: 70px;
+    height: 70px;
+    padding-left: 90%;
+}
+
+#main {
+    background-color: #FF6600;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+#main_text {
+    text-align: center;
+    width: 100%;
+    height: 90%;
+    padding: 13%;
+}
+
+#main_text .header {
+    color: white;
+    font-size: 50px;
+}
+
+#main_text .subheader {
+    color: white;
+    font-size: 35px;
+}
+
+#t1 {
+    background-color: #FFDC4B;
+}
+
+#text_1 {
+    text-align: left;
+    width: 100%;
+    height: 80%;
+    padding-top: 25%;
+    padding-left: 5%;
+}
+
+#text_1 .header {
+    color: #DC5100;
+    font-size: 50px;
+}
+
+#text_1 .subheader {
+    color: #DC5100;
+    font-size: 35px;
+    padding-left: 20px;
+}
+
+#t2 {
+    background-color: #00E5E5;
+}
+
+#text_2 {
+    text-align: right;
+    width: 100%;
+    height: 90%;
+    padding-top: 30%;
+    padding-right: 5%;
+}
+
+#text_2 .header {
+    color: #1A0292;
+    font-size: 50px;
+}
+
+#text_2 .subheader {
+    color: #1A0292;
+    font-size: 35px;
+}

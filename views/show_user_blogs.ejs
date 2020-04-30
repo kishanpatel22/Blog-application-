@@ -1,0 +1,73 @@
+<%- include ('./partials/header.ejs') %>
+    
+    <link rel="stylesheet" type="text/css" href="/stylesheets/show_user_blogs.css">
+
+    <div class="ui text container ">
+        <% if(error && error.length != 0) { %>
+            <div class="ui tiny warning message"><%= error %></div>
+        <% } %>
+        <% if(success && success.length != 0) { %>
+            <div class="ui mini positive message"><%= success %></div>
+        <% } %>
+    </div>
+
+
+    <div class="ui main text container segment">
+
+        <div class="ui right rail">
+            <div class="ui segment">
+                <h3>Hello <%=data.username%></h3>
+                <a href="/blogs/create_blog">
+                    <button class="ui primary button"><h4>Write something</h4></button>
+                </a>
+                <p></p>
+                <p>Interested in writing poems !</p>
+                <p>New update coming soon!</p>
+            </div>
+        </div>
+
+        <% for(var i = 0; i < data.user_blogs.length; i++) { %>
+
+            <div class="ui huge header"><%= data.user_blogs[i].title %></div>
+                <div class="ui top attached segment">
+                <div class="item">
+                    <img class="ui medium left floated rounded image blog_image" 
+                    src='<%= data.user_blogs[i].image %>' alt='image url'>
+                    <div class="discription">
+                         <p><%= data.user_blogs[i].content %></p>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="read_more">
+                        <a href="/blogs/show_user_blogs/<%= data.user_blogs[i]._id%>">
+                            <button class="ui primary button"> Read More</button>
+                        </a>
+                    </div>
+                    
+                    <div class="like">
+                        <button class="ui primary button bl"> 
+                            <i class="small thumbs up outline icon"></i> Like 
+                        </button>
+                    </div>
+                    
+                    <div class="dislike">
+                        <button class="ui primary button bd">
+                            <i class="small thumbs down outline icon"></i> Dislike 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <script>
+        var username = "<%= data.username %>";
+        var signed_user = document.getElementsByTagName('a')[3]
+        signed_user.innerHTML = '<div class=\"ui green button\">Signed in as ' + username + '</div>'
+        signed_user.href = '/blogs/show_user_blogs'
+    </script>
+
+    <script type="text/javascript" src="/scripts/show_user_blogs.js"></script>
+
+<%- include ('./partials/footer.ejs') %>
+
+

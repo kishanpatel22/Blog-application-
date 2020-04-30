@@ -1,0 +1,23 @@
+/* CSS for create_blog file */
+#title {
+    text-align: center; 
+    border: 3px solid black;
+    font-size: 30px;
+}
+
+.data {
+    font-size: 20px;
+    text-decoration: underline;
+    -webkit-text-underline-position: under;
+    -ms-text-underline-position: under;
+    text-underline-position: under;
+    margin : 0.5%;
+}
+
+label {
+    padding-left: 5%;
+}
+
+#add_blog {
+    margin-left: 40%;
+}

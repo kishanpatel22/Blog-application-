@@ -1,0 +1,41 @@
+<%- include ('./partials/header.ejs')%>
+
+    <script type="text/javascript" src="/scripts/show_blog.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/show_blog.css">
+
+    <div class="ui main text container segment ">
+       <div id="title">
+           <div class="ui huge header"><%= blog.title %></div>
+       </div>
+       <div class="ui top attached segment">
+           <img class="ui centered huge rounded image" src="<%= blog.image %>" alt="image url">
+           <div class="content">
+               <p> <%= blog.content%> </p>
+           </div>
+       </div>
+       <div class="options">
+            <div id="edit">
+                <a href="/blogs/show_user_blogs/<%=blog._id%>/edit">
+                    <button class="ui orange button"> Edit Blog </button>
+                </a>
+            </div>
+            
+            <div id="comment">
+                <a href="/blogs/show_user_blogs/<%=blog._id%>/comment">
+                    <button class="ui primary button"> Comment </button>
+                </a>
+            </div>
+            
+            <div id="delete">
+                <form action="/blogs/show_user_blogs/<%=blog._id%>?_method=DELETE" 
+                method="POST">
+                    <button class="ui red button"> 
+                        <i class="small trash icon"></i>
+                        Delete 
+                    </button>
+                </form>
+            </div>
+        </div>
+    <div>
+
+<%- include ('./partials/footer.ejs')%>

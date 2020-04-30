@@ -1,0 +1,37 @@
+#title {
+    border: 2px double grey;   
+    padding: 10px;
+}
+
+img {
+    border: 2px dashed black;
+    padding: 8px;
+}
+
+.content {
+    padding-top: 8px;
+    font-size: 20px;
+}
+
+.options {
+    width: 100%;
+    height: 45px;
+    background-color: #B6B6B6;
+    display: flex;
+}
+
+#edit { 
+    padding: 4px;
+    padding-left: 5%;
+}
+
+#comment {
+    padding: 4px;
+    padding-left: 10%;
+}
+
+#delete {
+    padding: 4px;
+    padding-left: 35%;
+}
+

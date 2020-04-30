@@ -1,0 +1,33 @@
+/* CSS for show user blogs file */
+.blog_image {
+    border: 2px dashed black;
+}
+
+.discription {
+    font-size: 15px;
+}
+
+
+.options {
+    width: 100%;
+    height: 45px;
+    background-color: #B6B6B6;
+    display: flex;
+}
+
+
+.read_more {
+    padding: 4px;
+    padding-left: 10%;
+}
+
+.like {
+    padding: 4px;
+    padding-left: 35%;
+}
+
+.dislike {
+    padding: 4px;
+    padding-left: 2:0%;
+}
+

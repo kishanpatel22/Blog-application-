@@ -1,2 +1,3 @@
-# Blog-application-
-Web services provided for writing online contents
+# Blog app
+
+Web based blogging application 

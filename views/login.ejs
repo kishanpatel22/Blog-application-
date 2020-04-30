@@ -1,0 +1,31 @@
+
+<%- include ('partials/header.ejs') %>
+
+    <div class="ui text container ">
+        <% if(error && error.length != 0) { %>
+            <div class="ui mini negative message"><%= error %></div>
+        <% } %>
+        <% if(success && success.length != 0) { %>
+            <div class="ui mini positive message"><%= success %></div>
+        <% } %>
+    </div>
+
+    <div class="ui main text container segment">
+        <form class="ui form" action="/blogs/login" method="POST">
+            <h1 class="ui dividing center aligned header"> Want to write Blogs !</h1>
+            <div class="field">
+                <label> Email</label><span id="email"></span>
+                <input type="text" name="email" placeholder="example@gamil.com">
+            </div>
+            <div class="field">
+                <label> Password</label><span id="password"></span>
+                <input type="password" name="password">
+            </div>
+            <button class="ui green button" type="submit">Login</button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="/scripts/login.js"></script>
+
+<%- include ('partials/footer.ejs') %>
+

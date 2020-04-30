@@ -1,0 +1,14 @@
+/* css for the header */
+body {
+    background: #B6B6B6;
+}
+
+.item i.icon{
+    font-size: 2em;
+}
+
+a.item {
+    font-size: 1em;
+}
+
+
